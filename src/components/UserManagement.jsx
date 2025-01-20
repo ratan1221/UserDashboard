@@ -6,6 +6,8 @@ import UserForm from "./UserForm"
 import Pagination from "./Pagination"
 import SearchFilter from "./SearchFilter"
 import { toast } from "react-toastify"
+import { Helmet } from 'react-helmet-async'
+import { PAGE_TITLES } from '../constants/titles'
 
 const UserManagement = () => {
   const dispatch = useDispatch()
@@ -145,42 +147,47 @@ const UserManagement = () => {
   }
 
   return (
-    <div>
-      <SearchFilter
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        filterDepartment={filterDepartment}
-        setFilterDepartment={setFilterDepartment}
-      />
-      <UserForm onSubmit={editingUser ? handleUpdateUser : handleAddUser} initialData={editingUser} />
-      {status === "loading" && <p>Loading...</p>}
-      {status === "succeeded" && (
-        <>
-          {selectedUsers.length > 0 && (
-            <button
-              onClick={handleBulkDelete}
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-4"
-            >
-              Delete Selected ({selectedUsers.length})
-            </button>
-          )}
-          <UserList
-            users={currentUsers}
-            onEdit={handleEditUser}
-            onDelete={handleDeleteUser}
-            onSort={handleSort}
-            sortConfig={sortConfig}
-            selectedUsers={selectedUsers}
-            onSelectUser={handleSelectUser}
-          />
-          <Pagination
-            currentPage={currentPage}
-            totalPages={Math.ceil(sortedUsers.length / usersPerPage)}
-            onPageChange={setCurrentPage}
-          />
-        </>
-      )}
-    </div>
+    <>
+      <Helmet>
+        <title>{PAGE_TITLES.USERS}</title>
+      </Helmet>
+      <div>
+        <SearchFilter
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          filterDepartment={filterDepartment}
+          setFilterDepartment={setFilterDepartment}
+        />
+        <UserForm onSubmit={editingUser ? handleUpdateUser : handleAddUser} initialData={editingUser} />
+        {status === "loading" && <p>Loading...</p>}
+        {status === "succeeded" && (
+          <>
+            {selectedUsers.length > 0 && (
+              <button
+                onClick={handleBulkDelete}
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-4"
+              >
+                Delete Selected ({selectedUsers.length})
+              </button>
+            )}
+            <UserList
+              users={currentUsers}
+              onEdit={handleEditUser}
+              onDelete={handleDeleteUser}
+              onSort={handleSort}
+              sortConfig={sortConfig}
+              selectedUsers={selectedUsers}
+              onSelectUser={handleSelectUser}
+            />
+            <Pagination
+              currentPage={currentPage}
+              totalPages={Math.ceil(sortedUsers.length / usersPerPage)}
+              onPageChange={setCurrentPage}
+            />
+          </>
+        )}
+      </div>
+    </>
   )
 }
 
