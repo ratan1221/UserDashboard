@@ -3,7 +3,7 @@
 </p>
 <p align="center"><h1 align="center">USERDASHBOARD</h1></p>
 <p align="center">
-	<em><code>❯ REPLACE-ME</code></em>
+	<em><code>❯ Ratan Kumar</code></em>
 </p>
 
 User Management Dashboard
@@ -29,7 +29,7 @@ Features
 ## Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/user-management-dashboard.git
+git clone https://github.com/ratan1221/user-management-dashboard.git](https://github.com/ratan1221/UserDashboard.git)
 cd user-management-dashboard
 ```
 
