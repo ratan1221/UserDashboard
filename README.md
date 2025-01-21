@@ -29,7 +29,7 @@ Features
 ## Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/ratan1221/user-management-dashboard.git](https://github.com/ratan1221/UserDashboard.git)
+git clone https://github.com/ratan1221/UserDashboard.git
 cd user-management-dashboard
 ```
 
