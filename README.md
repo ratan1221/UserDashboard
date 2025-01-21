@@ -129,7 +129,7 @@ UserDashboard/
 - Add keyboard shortcuts
 - Enhance mobile experience
 - DevOps
-Add CI/CD pipeline
-Implement monitoring
-Add error tracking
+Add CI/CD pipeline,
+Implement monitoring,
+Add error tracking,
 Improve deployment process
