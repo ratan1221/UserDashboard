@@ -45,6 +45,26 @@ VITE_API_URL=https://jsonplaceholder.typicode.com/users
 ```bash
 npm run dev
 ```
+**Using `docker`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
+
+```sh
+❯ docker build -t userdashboard .
+```
+## Run the Docker Container
+
+```bash
+docker run -d -p 3000:3000 userdashboard
+```
+## Pull from Docker Repo
+
+```bash
+docker pull ratan1221/userdashboard
+```
+
+## Use Docker Compose
+```bash
+docker-compose up -d
+```
 
 ## Tech Stack
 - React: Frontend library
