@@ -4,7 +4,6 @@ build
 .git
 *.md
 .gitignore
-.env.local
-.env.development
-.env.test
-.env.production
+*.md
+.env
+.env.*
