@@ -21,32 +21,63 @@ Features
 🚀 Optimized performance with caching
 
 ## Prerequisites
+
 - Node.js (v14 or higher)
 - npm
 - Git
 - JSONPlaceholder
 
 ## Installation
+
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/ratan1221/UserDashboard.git
 cd user-management-dashboard
 ```
 
 # Install dependencies:
+
 npm install
 
 # Create .env file in root directory:
+
 ```bash
 VITE_API_URL=https://jsonplaceholder.typicode.com/users
 ```
 
 # Start development server:
+
 ```bash
 npm run dev
 ```
 
+**Using `docker`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
+
+```sh
+❯ docker build -t ratan1221/userdashboard .
+```
+
+## Pull from Docker Repo
+
+```bash
+docker pull ratan1221/userdashboard
+```
+
+## Run the Docker Container
+
+```bash
+docker run -p 3000:3000 ratan1221/userdashboard
+```
+
+## Use Docker Compose
+
+```docker-compose up -d
+
+```
+
 ## Tech Stack
+
 - React: Frontend library
 - Redux Toolkit: State management
 - React Router: Navigation
@@ -54,8 +85,9 @@ npm run dev
 - Axios: API requests
 - React Toastify: Notifications
 - Vite: Build tool
-  
+
 ## Project Structure
+
 ```bash
 UserDashboard/
 ├── src/
@@ -96,6 +128,7 @@ UserDashboard/
 ```
 
 ### Features
+
 - User Management
 - Add new users
 - Edit existing users
@@ -129,7 +162,7 @@ UserDashboard/
 - Add keyboard shortcuts
 - Enhance mobile experience
 - DevOps
-Add CI/CD pipeline,
-Implement monitoring,
-Add error tracking,
-Improve deployment process
+  Add CI/CD pipeline,
+  Implement monitoring,
+  Add error tracking,
+  Improve deployment process
