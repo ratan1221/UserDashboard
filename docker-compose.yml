@@ -1,0 +1,6 @@
+services:
+  user-dashboard:
+    image: ratan1221/userdashboard:latest
+    ports:
+      - "80:80"
+    restart: unless-stopped
